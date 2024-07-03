@@ -1,0 +1,464 @@
+@font-face {
+  font-family: PoppinsBold;
+  src: url(/fonts/Poppins-Bold.ttf);
+
+
+} 
+
+@font-face {
+    font-family: AlfaSlabOne;
+    src: url(/fonts/AlfaSlabOne-Regular.ttf);
+  }
+
+/* css responsavel pela estilizacao das tags iniciais e mudança de tema */
+
+* {
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  position: relative;
+  width: 100%;
+  background-color: var(--primary-color);
+  height: 200vh;
+  transition: 0.7s;
+  z-index: 0;
+}
+
+/* configuracao do dark mod */
+
+:root {
+  --primary-color: #ffff;
+  --secondary-color: #000000;
+}
+
+.dark-mod {
+  --primary-color: #000000;
+  --secondary-color: #ffff;
+}
+
+/* configuracao barra de scroll */
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: var(--secondary-color);
+  border-radius: 25px;
+}
+
+/* efeito animacoes */
+
+.efeito-animation01 {
+  visibility: hidden;
+}
+
+.efeito-animation02 {
+  visibility: hidden;
+}
+
+.efeito-animation03 {
+  visibility: hidden;
+}
+
+
+
+/* roda pé */
+
+footer {
+  height: 10vh;
+  background-color: #151515;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8em;
+}
+
+/* site novo */
+
+.buttonContato {
+  padding: 0.7em 1.5em;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family:PoppinsBold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: var(--secondary-color);
+  transition: all 1000ms;
+  font-size: 11px;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid var(--secondary-color);
+  background-color: var(--primary-color);
+  text-decoration: none;
+
+}
+
+.buttonContato:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  outline: 2px solid #2d50b4;
+  box-shadow: 4px 5px 17px -4px #2d50b4;
+}
+
+.buttonContato::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #2d50b4;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+.buttonContato:hover::before {
+  width: 250%;
+}
+
+.containerdropdownli {
+  position: relative;
+}
+
+.arrow {
+  font-size: 0.8em; /* Tamanho da seta */
+  display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#paginaeevp{
+  /* background-color: blueviolet; */
+  height: 600px;
+  width: 100%;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+
+#container-pagina-eevp{
+  height: 80%;
+  width: 100%;
+  max-width: 1200px;
+  /* background-color: #0400ff; */
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  gap: 30px;
+ 
+}
+
+
+
+#logo-eevp-azul{
+  width: 350px;
+}
+
+
+#logo-eevp-azul img{
+  width: 100%;
+}
+
+.verticalline{
+  border-left: 2px solid black; /* Define a cor e a largura da linha */
+  height: 70%; /* Define a altura da linha */
+  margin: 0 10px; /* Define a margem horizontal */
+}
+
+.container-text-eevp{
+  width: 600px;
+  font-size: 25px;
+  font-family:PoppinsBold;
+}
+
+.container-text-eevp p{
+  flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#depoimentos{
+  height: 600px;
+  width: 100%;
+  background-color: #2d50b4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(/img/background\ depoimentos.png);
+  
+}
+
+.container-depoimentos{
+  width: 100%; 
+  height: 80%;
+  max-width: 1500px;
+padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+#container-title-depoimentos{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family:PoppinsBold;
+  font-size: 20px;
+  color: #fff;
+
+}
+
+.depoimentos-cards{
+  gap: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
+.card-depoimento{
+  width: 400px;
+}
+
+.card-depoimento img{
+  max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#localizacao{
+  width: 100%;
+ flex-wrap: wrap;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ gap: 200px;}
+
+.mapa{
+
+  width: 400px;
+  height: 400px;
+}
+
+.mapa-mapa{
+ width: 100%;
+  height:  100%;
+
+}
+
+/* 
+width="600" height="450" */
+
+
+
+.contato-input{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+align-items: center;
+justify-content: center;
+  width: 500px;
+  height: 450px;
+  align-items: center;
+}
+
+.contato-input input{
+  width: 100%;
+  height: 40px;
+  color: #000000;
+ border-radius: 3px;
+ padding-left: 10px;
+ font-size: 13px;
+ 
+  
+}
+
+
+
+
+.contato-input input::placeholder{
+  color: #000000;
+
+
+}
+
+#input-message{
+  height: 80px;
+}
+
+
+
+.container-button{
+  width: 100%;
+
+display: flex;
+justify-content: end;
+}
+
+.button-env-contato{
+  width: 100px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 3px;
+
+  
+}
+
+.roda-pe{
+  height: 60px;
+  width: 100%;
+  background-color: #000000;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-family:PoppinsBold;
+
+
+}
+
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Cor do fundo opaco */
+  transition: opacity 1s ease-in-out;
+  z-index: 997;
+ opacity: 0;
+  
+}
+
+
+@media (max-width:1100px){
+
+  #paginaeevp{
+    height: auto;
+  }
+  
+  #container-pagina-eevp{
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  
+  
+  
+  }
+  
+  #logo-eevp-azul{
+    width: 200px;
+  }
+  
+  .container-text-eevp{
+   font-size: 15px;
+  }
+  
+  
+  #depoimentos{
+   height: auto;
+   display: flex;
+   
+
+  }
+  
+  .container-depoimentos{
+    gap: 40px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    }
+
+    .depoimentos-cards{
+   flex-wrap: wrap;
+    }
+  
+    .card-depoimento{ width: 300px;}
+
+
+
+    #localizacao{ 
+      flex-wrap: wrap;
+     margin-top:30px;
+     margin-bottom: 30px;
+     gap: 50px;
+
+    }
+
+    .mapa{
+
+      width: 300px;
+      height: 250px;
+    }
+
+
+    .contato-input{
+      height: 300px;
+      width: 300px;
+    }
+
+  }
+
+
